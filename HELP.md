@@ -19,8 +19,8 @@
 
 # Running Locally
 
-gradle :bootRun
+```gradle :bootRun```
 
-#TODO
+# TODO
 * Replace Mocked Fuel Cost service with Third Party provider 
 * JUNIT Test cases
