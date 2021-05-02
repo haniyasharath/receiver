@@ -94,7 +94,7 @@ public class ReceivingServiceImpl implements ReceivingService {
 
     /**
      * Testing Receiving service code without RabbitMQ installed
-     */
+     *
     @Scheduled(cron = "${event.trigger}")
     public void triggerEvent() {
         handleEvent(new EventInputDto(true, "Bangalore"));
@@ -104,5 +104,5 @@ public class ReceivingServiceImpl implements ReceivingService {
             e.printStackTrace();
         }
         handleEvent(new EventInputDto(false, "Bangalore"));
-    }
+    } **/
 }
