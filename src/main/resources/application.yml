@@ -1,0 +1,24 @@
+spring:
+    application:
+        name: receiving-service
+    cloud:
+        stream:
+            bindings:
+                input:
+                    destination: receiving-service-in
+    rabbitmq:
+        host: localhost
+        port: 5672
+server:
+    port: 8085
+# cron format schedule - run at 12:00 AM every day
+hazelcast.clear: 0 0 0 * * *
+
+event.trigger: 0 0/1 * * * *
+hazelcast:
+    group.name: local
+    group.password: local
+    tcpipenabled: true
+    group.members: localhost
+    maxdepth: 1000
+    idle.ttl: 86400
