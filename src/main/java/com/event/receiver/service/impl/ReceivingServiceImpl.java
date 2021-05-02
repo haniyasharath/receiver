@@ -80,8 +80,8 @@ public class ReceivingServiceImpl implements ReceivingService {
         long lidOpenTime = lidOpenCloseDuration.getSeconds();
         double totalFuelIntake = BigDecimal.valueOf(lidOpenTime).divide(BigDecimal.valueOf(30), 2, RoundingMode.DOWN).doubleValue();
         BigDecimal totalFuelCost = fuelCost.multiply(BigDecimal.valueOf(totalFuelIntake), new MathContext(0, RoundingMode.DOWN));
-        log.info("Fuellid Open Time = {}", lidOpenTime);
-        log.info("No. of liter Fuel filled = {}", totalFuelIntake);
+        log.info("Fuellid Open Time = {} secs", lidOpenTime);
+        log.info("No. of liter Fuel filled = {} ltr", totalFuelIntake);
         log.info("Calculated Cost of Fuel = Rs. {}", totalFuelCost);
     }
 
